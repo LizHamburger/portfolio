@@ -4,6 +4,7 @@ body {
     height: 100%;
     width: 100%;
     font-size: 16px;
+    margin: 0;
 }
 
 main {
@@ -16,12 +17,32 @@ main {
     width: 100%;
     position: fixed;
     top: 0;
+    padding-left: 50px;
+
     background-color: white;
+}
+
+.nav .menu_item {
+    padding: 15px 30px 15px 0px;
+    display: block;
+    float: left;
+}
+
+.nav .burger_icon {
+    Display: none;
+    float: right;
+    padding: 15px 80px 15px 0px;
+}
+
+.fa-bars {
+    padding-right: 10px;
+    color: black;
+    font-size: 18px;
 }
 
 .nav .project_nav {
     float: right;
-    padding-right: 80px;
+    padding: 15px 80px 15px 0px;
 }
 
 .fa-angle-left {
@@ -42,8 +63,8 @@ main {
     color: black;
     text-decoration: none;
     padding: 15px 30px 15px 0px;
-    display: block;
-    float: left;
+    /* display: block;
+    float: left; */
 }
 
 .nav a:hover,
@@ -117,6 +138,12 @@ h3 {
     max-width: 850px;
 }
 
+.about_copy {
+    display: inline-block;
+    margin-top: 30px;
+    max-width: 350px;
+}
+
 /* Footer Styles */
 
 footer {
@@ -148,8 +175,8 @@ footer a:active {
 /* tablet */
 
 @media only screen and (max-width: 768px) {
-    body {
-        background-color: white;
+    main {
+        padding: 30px 30px;
     }
 
     .intro p {
@@ -182,14 +209,45 @@ footer a:active {
         flex-direction: column-reverse;
     }
 
+    .nav .burger_icon {
+        Display: block;
+        float: left;
+        padding: 15px 0px 15px 0px;
+    }
+
+    .nav {
+        padding-left: 30px;
+    }
+
+    .nav .menu_item {
+        display: none;
+    }
+
+    .nav a {
+        font-size: 0;
+    }
+
+    .nav a i {
+        font-size: 20px;
+    }
+
+    .nav .project_nav {
+        float: right;
+        padding: 15px 30px 15px 0px;
+    }
+
+    .nav .project_nav a {
+        padding: 0px 30px 0px 0px;
+    }
+
+    .fa-angle-left {
+        padding-right: 0px;
+    }
 }
 
 /* mobile */
 
-@media only screen and (max-width: 400px) {
-    body {
-        background-color: pink;
-    }
+@media only screen and (max-width: 320px) {
 
     .intro p {
         width: 100%;
