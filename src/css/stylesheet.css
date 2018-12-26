@@ -18,7 +18,6 @@ main {
     position: fixed;
     top: 0;
     padding-left: 50px;
-
     background-color: white;
 }
 
@@ -32,13 +31,14 @@ main {
     Display: none;
     float: right;
     padding: 15px 80px 15px 0px;
+    cursor: pointer;
 }
 
-.fa-bars {
+/* .fa-bars {
     padding-right: 10px;
     color: black;
     font-size: 18px;
-}
+} */
 
 .nav .project_nav {
     float: right;
@@ -63,8 +63,7 @@ main {
     color: black;
     text-decoration: none;
     padding: 15px 30px 15px 0px;
-    /* display: block;
-    float: left; */
+
 }
 
 .nav a:hover,
@@ -85,6 +84,7 @@ p {
     font-weight: 300;
     line-height: 1.5em;
     color: black;
+    margin-bottom: 10px;
 }
 
 .intro p {
@@ -104,6 +104,7 @@ h3 {
     line-height: 1.3em;
     color: black;
     padding-top: 30px;
+    margin-bottom: 10px;
 }
 
 /* Project containers */
@@ -118,24 +119,53 @@ h3 {
     margin: 0px 25px 25px 0px;
     width: 630px;
     height: 450px;
-    background-color: grey;
+    background-color: #578063;
+    /* position: relative; */
+}
+
+.forage-notes .thumb_nail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forage-notes .thumb_nail img {
+    width: 80%;
+    height: auto;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%); */
+}
+
+.thumb_nail img {
+    width: 100%;
+    height: 100%;
+}
+
+.internal_layout {
+    display: flex;
 }
 
 .project_images {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     vertical-align: top;
     padding-top: 67px;
 }
 
 .project_copy {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    /* display: inline-block; */
     padding-left: 50px;
     max-width: 350px;
 }
 
 .project_images img {
-    display: inline-block;
+    /* display: inline-block; */
     max-width: 850px;
+    padding-bottom: 15px;
 }
 
 .about_copy {
@@ -193,7 +223,6 @@ footer a:active {
         margin: 0px 25px 25px 0px;
         width: 300px;
         height: 225px;
-        background-color: grey;
     }
 
     .project_images img {
@@ -231,9 +260,57 @@ footer a:active {
         font-size: 20px;
     }
 
+    .hamburger {
+        margin-top: 20px;
+        width: 20px;
+        height: 2px;
+        background-color: #585858;
+        position: relative;
+        display: block;
+        transition: background-color .2s ease-in-out;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        width: 20px;
+        height: 2px;
+        content: '';
+        background-color: #585858;
+        position: absolute;
+        transition: transform .2s ease-in-out;
+    }
+
+    .hamburger::before {
+        top: -5px;
+    }
+
+    .hamburger::after {
+        bottom: -5px;
+    }
+
+    .burger_icon:hover .hamburger {
+        background-color: white;
+    }
+
+    .burger_icon:hover .hamburger::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .burger_icon:hover .hamburger::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+
+
     .nav .project_nav {
         float: right;
-        padding: 15px 30px 15px 0px;
+        padding: 25px 30px 15px 0px;
     }
 
     .nav .project_nav a {
@@ -243,11 +320,21 @@ footer a:active {
     .fa-angle-left {
         padding-right: 0px;
     }
+
+    .nav a:hover {
+        font-size: 0;
+    }
+
+    .nav a:hover i {
+        color: purple;
+    }
 }
+
+
 
 /* mobile */
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 400px) {
 
     .intro p {
         width: 100%;
@@ -255,14 +342,12 @@ footer a:active {
 
     .projects .thumb_nail {
         margin: 0px 25px 25px 0px;
-        width: 300px;
-        height: 225px;
-        background-color: grey;
-
+        width: 340px;
+        height: 265px;
     }
 
     .project_images img {
-        width: 300px;
+        width: 340px;
     }
 
 }
