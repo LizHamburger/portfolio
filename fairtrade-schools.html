@@ -3,6 +3,10 @@
 
 <head>
     <title>Liz Hamburger - Fairtrade Schools</title>
+    <!-- Below is the link to add jQuery to the site, this will be needed on every page like the script at the bottom // Remove this comment -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- jQuery link end -->
     <link rel="stylesheet" type="text/css" href="src/css/stylesheet.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
@@ -23,9 +27,13 @@
 
         <!--This is the hamburger icon for tablet and mobile-->
         <div class="burger_icon">
-            <div class="hamburger"></div>
-            <a href="index.html">home</a>
-        </div>
+                <div class="hamburger"></div>
+    
+                <ul class="submenu">
+                    <li><a href="index.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
     </div>
 
     <main>
@@ -62,6 +70,9 @@
         </section>
 
     </main>
+    <!-- This script will need to be added to every single HTML file // Remove this comment -->
+<script src="src/js/main.js" ></script>
+
 </body>
 
 </html>

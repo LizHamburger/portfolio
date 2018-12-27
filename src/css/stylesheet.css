@@ -26,7 +26,7 @@ main {
     padding: 15px 30px 15px 0px;
     display: block;
     float: left;
-    
+
 }
 
 .nav .burger_icon {
@@ -81,7 +81,7 @@ main {
     line-height: 1.3em;
     text-decoration: none;
     color: palevioletred;
-    
+
 }
 
 
@@ -186,7 +186,7 @@ h3 {
     padding-top: 67px;
 }
 
-.barclays .project_images{
+.barclays .project_images {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -199,7 +199,7 @@ h3 {
     background: #578063;
 }
 
-.foragenotes .project_images img{
+.foragenotes .project_images img {
     width: 80%;
     height: auto;
 }
@@ -263,7 +263,7 @@ footer a:active {
     .intro {
         margin-top: 30px;
     }
-    
+
     .intro p {
         width: 100%;
         margin-top: 60px;
@@ -295,8 +295,8 @@ footer a:active {
     }
 
     .nav .burger_icon {
-        display: block; // Typo was a capital
-        float: left;
+        display: block;
+        float: inherit;
         padding: 15px 0px 15px 0px;
     }
 
@@ -361,21 +361,29 @@ footer a:active {
     .submenu {
         display: none;
     }
-    
+
+.submenu li {
+    padding-top: 15px;
+}
+
     .submenu a {
-        font-size: 20px; // this is to override the .nav a font-size: 0
+        font-size: 20px;
+        /* this is to override the .nav a font-size: 0 */
     }
-    
+
     .submenu a:hover {
-        font-size: 20px !important; // This is also to override the font-size: 0
+        font-size: 20px !important;
+        /* This is also to override the font-size: 0 */
     }
-    
+
     .active .submenu {
         display: block;
-        height: 100vh; // This is 100% of the view port height
+        height: 100vh; 
+        width: 100vw;
+        /* This is 100% of the view port height */
     }
-    
-    // Below is a common override to stop unordered lists having a list style and padding left
+
+    /* // Below is a common override to stop unordered lists having a list style and padding left */
     ul {
         list-style: none;
         padding-left: 0;
