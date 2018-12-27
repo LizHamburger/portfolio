@@ -295,7 +295,7 @@ footer a:active {
     }
 
     .nav .burger_icon {
-        Display: block;
+        display: block; // Typo was a capital
         float: left;
         padding: 15px 0px 15px 0px;
     }
@@ -344,22 +344,41 @@ footer a:active {
         bottom: -5px;
     }
 
-    .burger_icon:hover .hamburger {
+    .active .hamburger {
         background-color: white;
     }
 
-    .burger_icon:hover .hamburger::before {
+    .active .hamburger::before {
         transform: rotate(45deg);
         top: 0;
     }
 
-    .burger_icon:hover .hamburger::after {
+    .active .hamburger::after {
         transform: rotate(-45deg);
         top: 0;
     }
 
     .submenu {
         display: none;
+    }
+    
+    .submenu a {
+        font-size: 20px; // this is to override the .nav a font-size: 0
+    }
+    
+    .submenu a:hover {
+        font-size: 20px !important; // This is also to override the font-size: 0
+    }
+    
+    .active .submenu {
+        display: block;
+        height: 100vh; // This is 100% of the view port height
+    }
+    
+    // Below is a common override to stop unordered lists having a list style and padding left
+    ul {
+        list-style: none;
+        padding-left: 0;
     }
 
 
