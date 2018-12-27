@@ -8,8 +8,9 @@ body {
 }
 
 main {
-    padding: 30px 50px;
+    padding: 60px 50px 30px 50px;
 }
+
 
 /* Navigation styles */
 .nav {
@@ -25,20 +26,15 @@ main {
     padding: 15px 30px 15px 0px;
     display: block;
     float: left;
+    
 }
 
 .nav .burger_icon {
-    Display: none;
+    display: none;
     float: right;
     padding: 15px 80px 15px 0px;
     cursor: pointer;
 }
-
-/* .fa-bars {
-    padding-right: 10px;
-    color: black;
-    font-size: 18px;
-} */
 
 .nav .project_nav {
     float: right;
@@ -48,11 +44,21 @@ main {
 .fa-angle-left {
     padding-right: 10px;
     color: #585858;
+    transition: 0.3s;
+}
+
+.fa-angle-left:hover {
+    color: palevioletred;
+}
+
+.fa-angle-right:hover {
+    color: palevioletred;
 }
 
 .fa-angle-right {
     padding-left: 10px;
     color: #585858;
+    transition: 0.3s;
 }
 
 .nav a {
@@ -63,6 +69,7 @@ main {
     color: black;
     text-decoration: none;
     padding: 15px 30px 15px 0px;
+    transition: 0.3s;
 
 }
 
@@ -72,8 +79,9 @@ main {
     font-size: 18px;
     font-weight: 300;
     line-height: 1.3em;
-    color: purple;
     text-decoration: none;
+    color: palevioletred;
+    
 }
 
 
@@ -85,6 +93,7 @@ p {
     line-height: 1.5em;
     color: black;
     margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 .intro p {
@@ -93,7 +102,7 @@ p {
     font-weight: 500;
     line-height: 1.3em;
     color: black;
-    padding: 30px 0px;
+    margin: 30px 0px;
     width: 730px;
 }
 
@@ -107,12 +116,35 @@ h3 {
     margin-bottom: 10px;
 }
 
+.project_copy a {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.3em;
+    color: black;
+    text-decoration: none;
+    padding: 15px 30px 15px 0px;
+    transition: 0.3s;
+
+}
+
+.project_copy a:hover,
+.project_copy a:active {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.3em;
+    text-decoration: none;
+    color: palevioletred;
+}
+
 /* Project containers */
 .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     align-items: flex-start;
+    padding-top: 30px;
 }
 
 .projects .thumb_nail {
@@ -154,6 +186,24 @@ h3 {
     padding-top: 67px;
 }
 
+.barclays .project_images{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.foragenotes .project_images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #578063;
+}
+
+.foragenotes .project_images img{
+    width: 80%;
+    height: auto;
+}
+
 .project_copy {
     display: flex;
     flex-direction: column;
@@ -171,7 +221,7 @@ h3 {
 .about_copy {
     display: inline-block;
     margin-top: 30px;
-    max-width: 350px;
+    max-width: 500px;
 }
 
 /* Footer Styles */
@@ -190,6 +240,7 @@ footer a {
     color: black;
     text-decoration: none;
     padding-right: 15px;
+    transition: 0.3s;
 }
 
 footer a:hover,
@@ -198,7 +249,7 @@ footer a:active {
     font-size: 18px;
     font-weight: 300;
     line-height: 1.3em;
-    color: purple;
+    color: palevioletred;
     text-decoration: none;
 }
 
@@ -209,8 +260,13 @@ footer a:active {
         padding: 30px 30px;
     }
 
+    .intro {
+        margin-top: 30px;
+    }
+    
     .intro p {
         width: 100%;
+        margin-top: 60px;
     }
 
     .project_copy {
@@ -326,7 +382,7 @@ footer a:active {
     }
 
     .nav a:hover i {
-        color: purple;
+        color: grey;
     }
 }
 
